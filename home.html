@@ -53,7 +53,7 @@
                         <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="material-icons opacity-10">home</i>
                         </div>
-                        <span class="nav-link-text ms-1">홈 화면</span>
+                        <span class="nav-link-text ms-1">홈</span>
                     </a>
                 </li>
                 <li class="nav-item">
@@ -112,11 +112,7 @@
         <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur" navbar-scroll="true">
             <div class="container-fluid py-1 px-3">
                 <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
-                        <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Pages</a></li>
-                        <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Dashboard</li>
-                    </ol>
-                    <h6 class="font-weight-bolder mb-0">Dashboard</h6>
+                    <h6 class="font-weight-bolder mb-0">홈</h6>
                 </nav>
                 <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
                     <div class="ms-md-auto pe-md-3 d-flex align-items-center">
@@ -296,60 +292,114 @@
                 <div class="col-lg-4 col-md-6 mt-4 mb-4">
                     <div class="card z-index-2 ">
                         <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
-                            <div class="bg-gradient-primary shadow-primary border-radius-lg py-3 pe-1">
-                                <div class="chart">
-                                    <canvas id="chart-bars" class="chart-canvas" height="170"></canvas>
+                            <div class="bg-gradient-light  shadow-light  border-radius-lg py-3 pe-1">
+                                <!-- TradingView Widget BEGIN -->
+                                <div class="tradingview-widget-container">
+                                    <div class="tradingview-widget-container__widget"></div>
+                                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+                                        {
+                                            "symbol": "KRX:KOSPI",
+                                            "width": "501",
+                                            "height": 220,
+                                            "locale": "kr",
+                                            "dateRange": "12M",
+                                            "colorTheme": "light",
+                                            "trendLineColor": "rgba(255, 166, 28, 0.26)",
+                                            "underLineColor": "rgba(255, 166, 28, 1)",
+                                            "underLineBottomColor": "rgba(255, 166, 28, 0)",
+                                            "isTransparent": true,
+                                            "autosize": false,
+                                            "largeChartUrl": ""
+                                        }
+                                    </script>
                                 </div>
+                                <!-- TradingView Widget END -->
                             </div>
                         </div>
                         <div class="card-body">
-                            <h6 class="mb-0 ">Website Views</h6>
-                            <p class="text-sm ">Last Campaign Performance</p>
-                            <hr class="dark horizontal">
-                            <div class="d-flex ">
-                                <i class="material-icons text-sm my-auto me-1">schedule</i>
-                                <p class="mb-0 text-sm"> campaign sent 2 days ago </p>
-                            </div>
+                            <h6 class="mb-0 ">KOSPI</h6>
+                            <!-- <p class="text-sm ">Last Campaign Performance</p>
+                      <hr class="dark horizontal">
+                      <div class="d-flex ">
+                        <i class="material-icons text-sm my-auto me-1">schedule</i>
+                        <p class="mb-0 text-sm"> campaign sent 2 days ago </p>
+                      </div> -->
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mt-4 mb-4">
                     <div class="card z-index-2  ">
                         <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
-                            <div class="bg-gradient-success shadow-success border-radius-lg py-3 pe-1">
-                                <div class="chart">
-                                    <canvas id="chart-line" class="chart-canvas" height="170"></canvas>
+                            <div class="bg-gradient-light shadow-light border-radius-lg py-3 pe-1">
+                                <!-- TradingView Widget BEGIN -->
+                                <div class="tradingview-widget-container">
+                                    <div class="tradingview-widget-container__widget"></div>
+                                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+                                        {
+                                            "symbol": "KRX:KOSDAQ",
+                                            "width": "501",
+                                            "height": "220",
+                                            "locale": "kr",
+                                            "dateRange": "12M",
+                                            "colorTheme": "light",
+                                            "trendLineColor": "rgba(39, 160, 13, 0.26)",
+                                            "underLineColor": "rgba(39, 160, 13, 1)",
+                                            "underLineBottomColor": "rgba(39, 160, 13, 0)",
+                                            "isTransparent": true,
+                                            "autosize": false,
+                                            "largeChartUrl": ""
+                                        }
+                                    </script>
                                 </div>
+                                <!-- TradingView Widget END -->
                             </div>
                         </div>
                         <div class="card-body">
-                            <h6 class="mb-0 "> Daily Sales </h6>
-                            <p class="text-sm "> (<span class="font-weight-bolder">+15%</span>) increase in today sales. </p>
-                            <hr class="dark horizontal">
-                            <div class="d-flex ">
-                                <i class="material-icons text-sm my-auto me-1">schedule</i>
-                                <p class="mb-0 text-sm"> updated 4 min ago </p>
-                            </div>
+                            <h6 class="mb-0 "> KOSDAQ </h6>
+                            <!-- <p class="text-sm "> (<span class="font-weight-bolder">+15%</span>) increase in today sales. </p>
+                      <hr class="dark horizontal">
+                      <div class="d-flex ">
+                        <i class="material-icons text-sm my-auto me-1">schedule</i>
+                        <p class="mb-0 text-sm"> updated 4 min ago </p>
+                      </div> -->
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 mt-4 mb-3">
                     <div class="card z-index-2 ">
                         <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
-                            <div class="bg-gradient-dark shadow-dark border-radius-lg py-3 pe-1">
-                                <div class="chart">
-                                    <canvas id="chart-line-tasks" class="chart-canvas" height="170"></canvas>
+                            <div class="bg-gradient-light shadow-light border-radius-lg py-3 pe-1">
+                                <!-- TradingView Widget BEGIN -->
+                                <div class="tradingview-widget-container">
+                                    <div class="tradingview-widget-container__widget"></div>
+                                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+                                        {
+                                            "symbol": "NASDAQ:SP-TSXV:SPX",
+                                            "width": "501",
+                                            "height": "220",
+                                            "locale": "kr",
+                                            "dateRange": "12M",
+                                            "colorTheme": "light",
+                                            "trendLineColor": "rgba(0, 0, 0, 0.26)",
+                                            "underLineColor": "rgba(0, 0, 0, 1)",
+                                            "underLineBottomColor": "rgba(0, 0, 0, 0)",
+                                            "isTransparent": true,
+                                            "autosize": false,
+                                            "largeChartUrl": ""
+                                        }
+                                    </script>
                                 </div>
+                                <!-- TradingView Widget END -->
                             </div>
                         </div>
                         <div class="card-body">
-                            <h6 class="mb-0 ">Completed Tasks</h6>
-                            <p class="text-sm ">Last Campaign Performance</p>
-                            <hr class="dark horizontal">
-                            <div class="d-flex ">
-                                <i class="material-icons text-sm my-auto me-1">schedule</i>
-                                <p class="mb-0 text-sm">just updated</p>
-                            </div>
+                            <h6 class="mb-0 ">S&P 500</h6>
+                            <!-- <p class="text-sm ">Last Campaign Performance</p>
+                      <hr class="dark horizontal">
+                      <div class="d-flex ">
+                        <i class="material-icons text-sm my-auto me-1">schedule</i>
+                        <p class="mb-0 text-sm">just updated</p>
+                      </div> -->
                         </div>
                     </div>
                 </div>
@@ -707,30 +757,20 @@
                                 ©
                                 <script>
                                     document.write(new Date().getFullYear())
-                                </script>, made with <i class="fa fa-heart"></i> by
-                                <a href="https://www.creative-tim.com" class="font-weight-bold" target="_blank">Creative Tim</a> for a better web.
+                                </script>, by Koscom Hackathon <b>Team 4</b>
+
                             </div>
                         </div>
                         <div class="col-lg-3">
                             <ul class="nav nav-footer justify-content-center justify-content-lg-end">
                                 <li class="nav-item">
-                                    <a href="https://www.creative-tim.com" class="nav-link text-muted" target="_blank">Distributed By: ThemeWagon</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-3">
-                            <ul class="nav nav-footer justify-content-center justify-content-lg-end">
-                                <li class="nav-item">
-                                    <a href="https://www.creative-tim.com" class="nav-link text-muted" target="_blank">Creative Tim</a>
+                                    <a href="https://github.com/PKs-GitHub/KosHackathon" class="nav-link text-muted" target="_blank">Git Repo</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="https://www.creative-tim.com/presentation" class="nav-link text-muted" target="_blank">About Us</a>
+                                    <a href="https://koshack.atlassian.net/jira/software/projects/KOS/boards/1" class="nav-link text-muted" target="_blank">Jira</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="https://www.creative-tim.com/blog" class="nav-link text-muted" target="_blank">Blog</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="https://www.creative-tim.com/license" class="nav-link pe-0 text-muted" target="_blank">License</a>
+                                    <a href="https://koshack.atlassian.net/wiki/spaces/K/overview?homepageId=163908" class="nav-link text-muted" target="_blank">Confluence</a>
                                 </li>
                             </ul>
                         </div>
