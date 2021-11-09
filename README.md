@@ -14,7 +14,7 @@
    - Ubuntu 18.04
    - Node.js 16.13.0
 
-## Configuration Managemnet Environment
+## Project & Configuration Management
  - Issue: [Jira](https://koshack.atlassian.net/jira/software/projects/KOS/boards/1)
  - Wiki: [Confluence](https://koshack.atlassian.net/wiki/spaces/K/overview?homepageId=163908)
  - Sources: [Git](https://github.com/PKs-GitHub/KosHackathon)
