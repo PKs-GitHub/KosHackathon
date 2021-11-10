@@ -33,7 +33,10 @@
     <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
     <!-- CSS Files -->
-    <link id="pagestyle" href="../assets/css/material-dashboard.css?v=3.0.0" rel="stylesheet" />
+    <link id="pagestyle" href="../assets/css/material-dashboard.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/trading.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/upbit.css" />
 </head>
 
 <body class="g-sidenav-show  bg-gray-200">
@@ -94,7 +97,8 @@
                 </li>
 
                 <li class="nav-item mt-3">
-                    <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">바로가기</h6>
+                    <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8"
+                        style="text-align: left;">바로가기</h6>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-white " href="https://finance.naver.com/#/" target="_blank">
@@ -152,80 +156,7 @@
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="fa fa-bell cursor-pointer"></i>
                             </a>
-                            <ul class="dropdown-menu  dropdown-menu-end  px-2 py-3 me-sm-n4"
-                                aria-labelledby="dropdownMenuButton">
-                                <li class="mb-2">
-                                    <a class="dropdown-item border-radius-md" href="javascript:;">
-                                        <div class="d-flex py-1">
-                                            <div class="my-auto">
-                                                <img src="./assets/img/team-2.jpg" class="avatar avatar-sm  me-3 ">
-                                            </div>
-                                            <div class="d-flex flex-column justify-content-center">
-                                                <h6 class="text-sm font-weight-normal mb-1">
-                                                    <span class="font-weight-bold">New message</span> from Laur
-                                                </h6>
-                                                <p class="text-xs text-secondary mb-0">
-                                                    <i class="fa fa-clock me-1"></i> 13 minutes ago
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="mb-2">
-                                    <a class="dropdown-item border-radius-md" href="javascript:;">
-                                        <div class="d-flex py-1">
-                                            <div class="my-auto">
-                                                <img src="./assets/img/small-logos/logo-spotify.svg"
-                                                    class="avatar avatar-sm bg-gradient-dark  me-3 ">
-                                            </div>
-                                            <div class="d-flex flex-column justify-content-center">
-                                                <h6 class="text-sm font-weight-normal mb-1">
-                                                    <span class="font-weight-bold">New album</span> by Travis Scott
-                                                </h6>
-                                                <p class="text-xs text-secondary mb-0">
-                                                    <i class="fa fa-clock me-1"></i> 1 day
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item border-radius-md" href="javascript:;">
-                                        <div class="d-flex py-1">
-                                            <div class="avatar avatar-sm bg-gradient-secondary  me-3  my-auto">
-                                                <svg width="12px" height="12px" viewBox="0 0 43 36" version="1.1"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    xmlns:xlink="http://www.w3.org/1999/xlink">
-                                                    <title>credit-card</title>
-                                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                        <g transform="translate(-2169.000000, -745.000000)"
-                                                            fill="#FFFFFF" fill-rule="nonzero">
-                                                            <g transform="translate(1716.000000, 291.000000)">
-                                                                <g transform="translate(453.000000, 454.000000)">
-                                                                    <path class="color-background"
-                                                                        d="M43,10.7482083 L43,3.58333333 C43,1.60354167 41.3964583,0 39.4166667,0 L3.58333333,0 C1.60354167,0 0,1.60354167 0,3.58333333 L0,10.7482083 L43,10.7482083 Z"
-                                                                        opacity="0.593633743"></path>
-                                                                    <path class="color-background"
-                                                                        d="M0,16.125 L0,32.25 C0,34.2297917 1.60354167,35.8333333 3.58333333,35.8333333 L39.4166667,35.8333333 C41.3964583,35.8333333 43,34.2297917 43,32.25 L43,16.125 L0,16.125 Z M19.7083333,26.875 L7.16666667,26.875 L7.16666667,23.2916667 L19.7083333,23.2916667 L19.7083333,26.875 Z M35.8333333,26.875 L28.6666667,26.875 L28.6666667,23.2916667 L35.8333333,23.2916667 L35.8333333,26.875 Z">
-                                                                    </path>
-                                                                </g>
-                                                            </g>
-                                                        </g>
-                                                    </g>
-                                                </svg>
-                                            </div>
-                                            <div class="d-flex flex-column justify-content-center">
-                                                <h6 class="text-sm font-weight-normal mb-1">
-                                                    Payment successfully completed
-                                                </h6>
-                                                <p class="text-xs text-secondary mb-0">
-                                                    <i class="fa fa-clock me-1"></i> 2 days
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
+
                         </li>
                     </ul>
                 </div>
@@ -234,35 +165,35 @@
         <!-- End Navbar -->
 
         <div class="row mb-4">
-            <div class="col-lg-8 col-md-6 mb-md-0 mb-4">
+
+            <div class="col-lg-7 col-md-6 mb-md-0 mb-4">
                 <div class="card">
                     <div class="card-header pb-0">
                         <div class="row">
-                            <div class="col-lg-6 col-7">
-                                <h6>차트</h6>
+                            <div class="col-lg-6 col-7" style="float: right;">
                                 <p class="text-sm mb-0">
-                                    <span class="font-weight-bold ms-1">종목명</span>
+                                    <span class="font-weight-bold ms-1" style="float:right">종목명</span>
                                 </p>
                             </div>
                             <div class="col-lg-3 col-1 my-auto text-end">
-                                <div class="ms-md-auto pe-md-3 d-flex align-items-center">
+                                <div class="ms-md-auto pe-md-3 d-flex ">
                                     <div class="input-group input-group-outline">
-                                        <label class="form-label">Type here...</label>
+                                        <label class="form-label" style="float: right;">Type here...</label>
                                         <input type="text" class="form-control">
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="card-body px-0 pb-2">
+                    <div class="card-body px-0 pb-2" style="height: 900px;">
                         <!-- TradingView Widget BEGIN -->
                         <div class="tradingview-widget-container">
                             <div id="tradingview_24005"></div>
                             <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
                             <script type="text/javascript" nonce="">
                                 new TradingView.widget({
-                                    "width": 980,
-                                    "height": 610,
+                                    "width": 'auto',
+                                    "height": '800px',
                                     "symbol": "NASDAQ:AAPL",
                                     "interval": "D",
                                     "timezone": "Etc/UTC",
@@ -280,83 +211,238 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="card h-50">
-                    <!-- PKPKPKPK -->
+            <div class="col-lg-5 col-md-6">
+                <div class="card h-30" style="height: auto;">
+                    <div class="card-header pb-0">
+                        <h2>
+                            <strong style="font-weight: bold;">시세표</strong>
+                            &nbsp;
+                            <span style="font-size: 20px; color: gray;">(호가)</span>
 
-                    <!-- PK END-->
+                        </h2>
+                    </div>
 
+                    <table class="table_hoga" style="max-height: 400px; overflow:hidden; margin-bottom: 10px;">
+                        <thead class="thead">
+                            <tr class="AskList_tr__3OdkB">
+                                <th scope="col" style="text-align: center;padding: 10px 0">팝니다</th>
+                                <th scope="col"
+                                    style="text-align: center;line-height: 19px;padding: 10px 0 8px;border-bottom: 2px solid">
+                                    이 가격에요</th>
+
+                                <th scope="col" style="text-align: center;padding: 10px 0">삽니다</th>
+                            </tr>
+                        </thead>
+                        <tbody style="overflow:hidden;">
+                            <tr>
+                                <td>
+                                    <div class="ask_amount" id="sell_amount1">2,986
+                                        <div style="width: 16%;">
+                                        </div>
+                                    </div>
+                                </td>
+                                <td style="background-color: rgba(10,125,243,.07);">
+                                    <div class="ask_price" id="sell_price1" onclick="FillPriceForm(this)">67,000</div>
+                                </td>
+                                <td style="border-top: 0;"></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="ask_amount" id="sell_amount2">2,986
+                                        <div style="width: 16%;">
+                                        </div>
+                                    </div>
+                                </td>
+                                <td style="background-color: rgba(10,125,243,.07);">
+                                    <div class="ask_price" id="sell_price2" onclick="FillPriceForm(this)">66,000</div>
+                                </td>
+                                <td style="border-top: 0;"></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="ask_amount" id="sell_amount3">2,986
+                                        <div style="width: 16%;">
+                                        </div>
+                                    </div>
+                                </td>
+                                <td style="background-color: rgba(10,125,243,.07);">
+                                    <div class="ask_price" id="sell_price3" onclick="FillPriceForm(this)">65,000</div>
+                                </td>
+                                <td style=" border-top: 0;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="ask_amount" id="sell_amount4">2,986
+                                        <div style="width: 16%;">
+                                        </div>
+                                    </div>
+                                </td>
+                                <td style="background-color: rgba(10,125,243,.07);">
+                                    <div class="ask_price" id="sell_price4" onclick="FillPriceForm(this)">64,000</div>
+                                </td>
+                                <td style=" border-top: 0;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="ask_amount" id="sell_amount5">2,986
+                                        <div style="width: 16%;">
+                                        </div>
+                                    </div>
+                                </td>
+                                <td style="background-color: rgba(10,125,243,.07);">
+                                    <div class="ask_price" id="sell_price5" onclick="FillPriceForm(this)">63,000</div>
+                                </td>
+                                <td style=" border-top: 0;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="border-top: 0;"></td>
+                                <td style="background-color: rgba(237,55,56,.07);">
+                                    <div class="ask_price" id="buy_price1" onclick="FillPriceForm(this)">62,000</div>
+                                </td>
+                                <td>
+                                    <div class=" ask_amount" id="buy_amount1">2,986
+                                        <div style="width: 16%;">
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="border-top: 0;"></td>
+                                <td style="background-color: rgba(237,55,56,.07);">
+                                    <div class="ask_price" id="buy_price2" onclick="FillPriceForm(this)">61,000</div>
+                                </td>
+                                <td>
+                                    <div class=" ask_amount" id="buy_amount2">2,986
+                                        <div style="width: 16%;">
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="border-top: 0;"></td>
+                                <td style="background-color: rgba(237,55,56,.07);">
+                                    <div class="ask_price" id="buy_price3" onclick="FillPriceForm(this)">60,000</div>
+                                </td>
+                                <td>
+                                    <div class=" ask_amount" id="buy_amount3">2,986
+                                        <div style="width: 16%;">
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="border-top: 0;"></td>
+                                <td style="background-color: rgba(237,55,56,.07);">
+                                    <div class="ask_price" id="buy_price4" onclick="FillPriceForm(this)">59,000</div>
+                                </td>
+                                <td>
+                                    <div class=" ask_amount" id="buy_amount4">2,986
+                                        <div style="width: 16%;">
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="border-top: 0;"></td>
+                                <td style="background-color: rgba(237,55,56,.07);">
+                                    <div class="ask_price" id="buy_price5" onclick="FillPriceForm(this)">58,000</div>
+                                </td>
+                                <td>
+                                    <div class=" ask_amount" id="buy_amount5">2,986
+                                        <div style="width: 16%;">
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
 
                 </div>
-                <div class="card h-30">
-                    <div class="card-header pb-0">
-                        <h6>Orders overview</h6>
-                        <p class="text-sm">
-                            <i class="fa fa-arrow-up text-success" aria-hidden="true"></i>
-                            <span class="font-weight-bold">24%</span> this month
-                        </p>
+                <p />
+
+                <div class="card h-30" style="height: auto;">
+                    <p />
+                    <h2 style="font-weight: bold;">
+                        사고팔기
+                    </h2>
+                    <p />
+
+                    <!--주문 탭 START-->
+                    <div class="tabbed round" style="width: auto;">
+                        <ul>
+                            <li class="margin:0 auto;padding:3px">거래내역</li>
+                            <li class="margin:0 auto;padding:3px">팔래요!</li>
+                            <li class="margin:0 auto;padding:3px active">살래요!</li>
+                        </ul>
                     </div>
-                    <div class="card-body p-3">
-                        <div class="timeline timeline-one-side">
-                            <div class="timeline-block mb-3">
-                                <span class="timeline-step">
-                                    <i class="material-icons text-success text-gradient">notifications</i>
-                                </span>
-                                <div class="timeline-content">
-                                    <h6 class="text-dark text-sm font-weight-bold mb-0">$2400, Design changes</h6>
-                                    <p class="text-secondary font-weight-bold text-xs mt-1 mb-0">22 DEC 7:20 PM</p>
+                    <!--주문 탭 END-->
+                    <!--주문 START-->
+                    <span class="orderB">
+                        <div class="max">
+                            <div style="height: auto;">
+                                <dl>
+                                    <dt>
+                                        <strong>주문가능</strong>
+                                    </dt>
+                                    <dd>
+                                        <strong id="available_amount">0</strong>
+                                        원
+                                    </dd>
+                                    <dt>
+                                        <strong>얼마에 팔까요?</strong>
+                                        &nbsp;
+                                        <i>(주문가격)</i>
+                                    </dt>
+                                    <dd class="marginB10">
+                                        <div class="inputB">
+                                            <input type="text" id="order_price" class="inputbox" placeholder="0 원"
+                                                value="" onkeyup="inputNumberFormat(this)"
+                                                onchange="updateTotalOrder()">
+                                        </div>
+                                    </dd>
+                                    <dt class="marginB6">
+                                        <strong>몇개나 팔까요?</strong>
+                                        &nbsp;
+                                        <i>(주문수량)</i>
+                                    </dt>
+                                    <dd class="marginB6">
+                                        <input type="text" id="order_amount" class="txt All" placeholder="0 개" value=""
+                                            onkeyup="inputNumberFormat(this)" onchange="updateTotalOrder()">
+                                    </dd>
+                                    <p></p>
+                                    <dt style="margin-top: 10px; font-weight: bold; color:black;">
+                                        <strong>총 주문 금액</strong>
+                                    </dt>
+                                    <dd id="total_order" style="font-weight: bold; color:black">
+                                        0 원
+                                    </dd>
+                                </dl>
+                                <!--매수/매도/초기화 버튼 START-->
+                                <div class="FixedBottom">
+                                    <ul class="btnB">
+                                        <li class="ty03">
+                                            <a href="javascript:ResetForms();" title="초기화">
+                                                <span>초기화</span>
+                                            </a>
+                                        </li>
+                                        <li class="ty04">
+                                            <a href="javascript:BuyOrder();" title="매수">
+                                                매수
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </div>
-                            </div>
-                            <div class="timeline-block mb-3">
-                                <span class="timeline-step">
-                                    <i class="material-icons text-danger text-gradient">code</i>
-                                </span>
-                                <div class="timeline-content">
-                                    <h6 class="text-dark text-sm font-weight-bold mb-0">New order #1832412</h6>
-                                    <p class="text-secondary font-weight-bold text-xs mt-1 mb-0">21 DEC 11 PM</p>
-                                </div>
-                            </div>
-                            <div class="timeline-block mb-3">
-                                <span class="timeline-step">
-                                    <i class="material-icons text-info text-gradient">shopping_cart</i>
-                                </span>
-                                <div class="timeline-content">
-                                    <h6 class="text-dark text-sm font-weight-bold mb-0">Server payments for April</h6>
-                                    <p class="text-secondary font-weight-bold text-xs mt-1 mb-0">21 DEC 9:34 PM</p>
-                                </div>
-                            </div>
-                            <div class="timeline-block mb-3">
-                                <span class="timeline-step">
-                                    <i class="material-icons text-warning text-gradient">credit_card</i>
-                                </span>
-                                <div class="timeline-content">
-                                    <h6 class="text-dark text-sm font-weight-bold mb-0">New card added for order
-                                        #4395133</h6>
-                                    <p class="text-secondary font-weight-bold text-xs mt-1 mb-0">20 DEC 2:20 AM</p>
-                                </div>
-                            </div>
-                            <div class="timeline-block mb-3">
-                                <span class="timeline-step">
-                                    <i class="material-icons text-primary text-gradient">key</i>
-                                </span>
-                                <div class="timeline-content">
-                                    <h6 class="text-dark text-sm font-weight-bold mb-0">Unlock packages for development
-                                    </h6>
-                                    <p class="text-secondary font-weight-bold text-xs mt-1 mb-0">18 DEC 4:54 AM</p>
-                                </div>
-                            </div>
-                            <div class="timeline-block">
-                                <span class="timeline-step">
-                                    <i class="material-icons text-dark text-gradient">payments</i>
-                                </span>
-                                <div class="timeline-content">
-                                    <h6 class="text-dark text-sm font-weight-bold mb-0">New order #9583120</h6>
-                                    <p class="text-secondary font-weight-bold text-xs mt-1 mb-0">17 DEC</p>
-                                </div>
+                                <!--매수/매도/초기화 버튼 END-->
                             </div>
                         </div>
-                    </div>
+
+                    </span>
+                    <!--주문 END-->
                 </div>
+
             </div>
         </div>
         <footer class="footer py-4  ">
@@ -486,7 +572,390 @@
     <script src="./assets/js/plugins/perfect-scrollbar.min.js"></script>
     <script src="./assets/js/plugins/smooth-scrollbar.min.js"></script>
     <script src="./assets/js/plugins/chartjs.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
+        function FillPriceForm(e) {
+            $('#order_price').val(e.innerHTML);
+
+            if ($('#order_amount').val != "") {
+                updateTotalOrder();
+            }
+        }
+
+        function ResetForms() {
+            $('#order_price').val("");
+            $('#order_amount').val("");
+        }
+
+        function BuyOrder() {
+            var result = confirm("정말 살까요 ?");
+            if (result) {
+                var order_price = uncomma($('#order_price')[0].value);
+                var order_amount = uncomma($('#order_amount')[0].value);
+
+                var total = Number(order_price) * Number(order_amount);
+
+                if (total > 0)
+                    alert("매수 주문 전송");
+
+                else
+                    alert("가격과 수량을 확인하세요");
+            }
+        }
+
+        function SellOrder() {
+            var result = confirm("정말 팔까요 ?");
+            if (result) {
+                var order_price = uncomma($('#order_price')[0].value);
+                var order_amount = uncomma($('#order_amount')[0].value);
+
+                var total = Number(order_price) * Number(order_amount);
+
+                var available_amount = Number($('#available_amount')[0].innerHTML);
+
+                if (total > 0 && available_amount >= order_amount)
+                    alert("매도 주문 전송");
+
+                else
+                    alert("가격과 수량을 확인하세요");
+            }
+        }
+
+
+    </script>
+    <script>
+
+        /*
+        * 주문
+        */
+
+        /*
+        * 주문탭 클릭이벤트 리스너
+        */
+        document.addEventListener("DOMContentLoaded", function () {
+            var tabs = document.querySelectorAll('.tabbed li');
+
+            for (var i = 0, len = tabs.length; i < len; i++) {
+                tabs[i].addEventListener("click", function () {
+                    if (this.classList.contains('active'))
+                        return;
+
+                    var parent = this.parentNode,
+                        innerTabs = parent.querySelectorAll('li');
+
+                    for (var index = 0, iLen = innerTabs.length; index < iLen; index++) {
+                        innerTabs[index].classList.remove('active');
+                    }
+
+                    this.classList.add('active');
+
+                    if (this.innerHTML.indexOf('살래') >= 0) {
+                        $('.max').html(
+                            '<div style="height: auto;">' +
+                            '<dl>' +
+                            '<dt>' +
+                            '<strong>주문가능</strong>' +
+                            '</dt>' +
+                            '<dd>' +
+                            '<strong id="available_amount">0</strong>' +
+                            '<i>원</i>' +
+                            '</dd>' +
+                            '<dt>' +
+                            '<strong>얼마에 살까요?</strong>' +
+                            '&nbsp;' +
+                            '<i>(주문가격)</i>' +
+                            '</dt>' +
+                            '<dd class="marginB10">' +
+                            '<div class="inputB">' +
+                            '<input type="text" id="order_price" class="inputbox" placeholder="0 원"' +
+                            'value="" onkeyup="inputNumberFormat(this)">' +
+                            '</div>' +
+                            '</dd>' +
+                            '<dt class="marginB6">' +
+                            '<strong>몇개나 살까요?</strong>' +
+                            '&nbsp;' +
+                            '<i>(주문수량)</i>' +
+                            '</dt>' +
+                            '<dd class="marginB6">' +
+                            '<input type="text" id="order_amount" class="txt All" placeholder="0 개" value="" onkeyup="inputNumberFormat(this)" onchange="updateTotalOrder()">' +
+                            '</dd>' +
+                            '<p></p>' +
+                            '        <dt style="margin-top: 10px; font-weight: bold; color:black;">' +
+                            '            <strong>총 주문 금액</strong>' +
+                            '        </dt>' +
+                            '        <dd id="total_order" style="font-weight: bold; color:black">' +
+                            '            0 원' +
+                            '        </dd>' +
+                            '</dl>' +
+                            '<!--매수/매도/초기화 버튼 START-->' +
+                            '                                <div class="FixedBottom">' +
+                            '                                    <ul class="btnB">' +
+                            '                                        <li class="ty03">' +
+                            '                                            <a href="javascript:ResetForms();" title="초기화">' +
+                            '                                                <span>초기화</span>' +
+                            '                                            </a>' +
+                            '                                        </li>' +
+                            '                                        <li class="ty04">' +
+                            '                                            <a href="javascript:BuyOrder();" title="매수">' +
+                            '                                                매수' +
+                            '                                            </a>' +
+                            '                                        </li>' +
+                            '                                    </ul>' +
+                            '                                </div>' +
+                            '                                <!--매수/매도/초기화 버튼 END-->' +
+                            '</div>'
+                        );
+                    }
+
+                    else if (this.innerHTML.indexOf('팔래') >= 0) {
+                        $('.max').html(
+                            '<div style="height: auto;">' +
+                            '<dl>' +
+                            '<dt>' +
+                            '<strong>주문가능</strong>' +
+                            '</dt>' +
+                            '<dd>' +
+                            '<strong id="available_amount">100</strong>' +
+                            '<i>개</i>' +
+                            '</dd>' +
+                            '<dt>' +
+                            '<strong>얼마에 팔까요?</strong>' +
+                            '&nbsp;' +
+                            '<i>(주문가격)</i>' +
+                            '</dt>' +
+                            '<dd class="marginB10">' +
+                            '<div class="inputB">' +
+                            '<input type="text" id="order_price" class="inputbox" placeholder="0 원"' +
+                            'value="" onkeyup="inputNumberFormat(this)">' +
+                            '</div>' +
+                            '</dd>' +
+                            '<dt class="marginB6">' +
+                            '<strong>몇개나 팔까요?</strong>' +
+                            '&nbsp;' +
+                            '<i>(주문수량)</i>' +
+                            '</dt>' +
+                            '<dd class="marginB6">' +
+                            '<input type="text" id="order_amount" class="txt All" placeholder="0 개" value="" onkeyup="inputNumberFormat(this)" onchange="updateTotalOrder()">' +
+                            '</dd>' +
+                            '<p></p>' +
+                            '        <dt style="margin-top: 10px; font-weight: bold; color:black;">' +
+                            '            <strong>총 주문 금액</strong>' +
+                            '        </dt>' +
+                            '        <dd id="total_order" style="font-weight: bold; color:black">' +
+                            '            0 원' +
+                            '        </dd>' +
+                            '</dl>' +
+                            '<!--매수/매도/초기화 버튼 START-->' +
+                            '                                <div class="FixedBottom">' +
+                            '                                    <ul class="btnB">' +
+                            '                                        <li class="ty03">' +
+                            '                                            <a href="javascript:ResetForms();" title="초기화">' +
+                            '                                                <span>초기화</span>' +
+                            '                                            </a>' +
+                            '                                        </li>' +
+                            '                                        <li class="ty02">' +
+                            '                                            <a href="javascript:SellOrder();" title="매도">' +
+                            '                                                매도' +
+                            '                                            </a>' +
+                            '                                        </li>' +
+                            '                                    </ul>' +
+                            '                                </div>' +
+                            '                                <!--매수/매도/초기화 버튼 END-->' +
+                            '</div>'
+                        );
+                    }
+
+                    else {
+                        //else if (this.innerHTML.indexOf('내역') >= 0) {
+                        $('.max').html(
+                            '        <div class="ExHistorySet">' +
+                            '            <div class="ExHistorySet__Radio">' +
+                            '                <span class="globalRadio_blue">' +
+                            '                    <input type="radio" id="ExHistory_openorder" name="ExHistory_radio" checked="">' +
+                            '                    <label for="ExHistory_openorder" style="margin-right:20px">미체결</label>' +
+                            '                </span>' +
+                            '                <span class="globalRadio_blue">' +
+                            '                    <input type="radio" id="ExHistory_completed" name="ExHistory_radio">' +
+                            '                    <label for="ExHistory_completed">체결</label>' +
+                            '               </span>' +
+                            '          </div>' +
+                            '        </div>' +
+                            '        <div class="ExHistoryTable" style="width=100%; margin:auto; max-height: 410px; width: auto">' +
+                            '            <table style="width: auto;">' +
+                            '                <colgroup>' +
+                            '                    <col width="94px">' +
+                            '                    <col width="100px">' +
+                            '                    <col width="120px">' +
+                            '                    <col>' +
+                            '                </colgroup>' +
+                            '                <thead style="width: auto;">' +
+                            '                    <tr>' +
+                            '                        <th rowspan="2">체결시간</th>' +
+                            '                        <th>종목명</th>' +
+                            '                        <th>체결가격</th>' +
+                            '                        <th rowspan="2">체결수량</th>' +
+                            '                    </tr>' +
+                            '                    <tr>' +
+                            '                        <th>구분</th>' +
+                            '                        <th>체결금액</th>' +
+                            '                    </tr>' +
+                            '                </thead>' +
+                            '            </table>' +
+                            '        </div>' +
+                            '        <div class="ExHistoryTable ExHistoryTable--ScrollHeight" style="width=80%; margin:auto; overflow: hidden; max-height: 190px;">' +
+                            '            <div style="position: relative; overflow: hidden; width: 100%; height: 100%;">' +
+                            '                <div' +
+                            '                    style="position: absolute; inset: 0px; overflow: scroll; margin-right: -21px; margin-bottom: -21px;">' +
+                            '                    <table>' +
+                            '                        <colgroup>' +
+                            '                            <col width="94px">' +
+                            '                            <col width="100px">' +
+                            '                            <col width="120px">' +
+                            '                            <col>' +
+                            '                        </colgroup>' +
+                            '                        <tbody>' +
+                            '                            <tr>' +
+                            '                                <td>' +
+                            '                                    <div class="ExHistoryTable__Day">2021.11.02</div>' +
+                            '                                    <div class="ExHistoryTable__Time">13:50</div>' +
+                            '                                </td>' +
+                            '                                <td>' +
+                            '                                    <div class="ExHistoryTable__Pairs">GAS/KRW</div>' +
+                            '                                    <div class="ExHistoryTable__Type ExHistoryTable__Type--Buy">매수</div>' +
+                            '                                </td>' +
+                            '                                <td>' +
+                            '                                    <div class="ExHistoryTable__Price">10,460</div>' +
+                            '                                    <div class="ExHistoryTable__Total">3,000,000</div>' +
+                            '                                </td>' +
+                            '                                <td>' +
+                            '                                    <div class="ExHistoryTable__Amount">286.80688336</div>' +
+                            '                                </td>' +
+                            '                            </tr>' +
+                            '                            <tr>' +
+                            '                                <td>' +
+                            '                                    <div class="ExHistoryTable__Day">2021.11.02</div>' +
+                            '                                    <div class="ExHistoryTable__Time">13:50</div>' +
+                            '                                </td>' +
+                            '                                <td>' +
+                            '                                    <div class="ExHistoryTable__Pairs">GAS/KRW</div>' +
+                            '                                    <div class="ExHistoryTable__Type ExHistoryTable__Type--Buy">매수</div>' +
+                            '                                </td>' +
+                            '                                <td>' +
+                            '                                    <div class="ExHistoryTable__Price">10,460</div>' +
+                            '                                    <div class="ExHistoryTable__Total">3,000,000</div>' +
+                            '                                </td>' +
+                            '                                <td>' +
+                            '                                    <div class="ExHistoryTable__Amount">286.80688336</div>' +
+                            '                                </td>' +
+                            '                            </tr>' +
+                            '                            <tr>' +
+                            '                                <td>' +
+                            '                                    <div class="ExHistoryTable__Day">2021.11.02</div>' +
+                            '                                    <div class="ExHistoryTable__Time">13:50</div>' +
+                            '                                </td>' +
+                            '                                <td>' +
+                            '                                    <div class="ExHistoryTable__Pairs">GAS/KRW</div>' +
+                            '                                    <div class="ExHistoryTable__Type ExHistoryTable__Type--Buy">매수</div>' +
+                            '                                </td>' +
+                            '                                <td>' +
+                            '                                    <div class="ExHistoryTable__Price">10,460</div>' +
+                            '                                    <div class="ExHistoryTable__Total">3,000,000</div>' +
+                            '                                </td>' +
+                            '                                <td>' +
+                            '                                    <div class="ExHistoryTable__Amount">286.80688336</div>' +
+                            '                                </td>' +
+                            '                            </tr>' +
+                            '                            <tr>' +
+                            '                                <td>' +
+                            '                                    <div class="ExHistoryTable__Day">2021.11.02</div>' +
+                            '                                    <div class="ExHistoryTable__Time">13:50</div>' +
+                            '                                </td>' +
+                            '                                <td>' +
+                            '                                    <div class="ExHistoryTable__Pairs">GAS/KRW</div>' +
+                            '                                    <div class="ExHistoryTable__Type ExHistoryTable__Type--Buy">매수</div>' +
+                            '                                </td>' +
+                            '                                <td>' +
+                            '                                    <div class="ExHistoryTable__Price">10,460</div>' +
+                            '                                    <div class="ExHistoryTable__Total">3,000,000</div>' +
+                            '                                </td>' +
+                            '                                <td>' +
+                            '                                    <div class="ExHistoryTable__Amount">286.80688336</div>' +
+                            '                                </td>' +
+                            '                            </tr>' +
+                            '                            <tr>' +
+                            '                                <td>' +
+                            '                                    <div class="ExHistoryTable__Day">2021.11.02</div>' +
+                            '                                    <div class="ExHistoryTable__Time">13:50</div>' +
+                            '                                </td>' +
+                            '                                <td>' +
+                            '                                    <div class="ExHistoryTable__Pairs">GAS/KRW</div>' +
+                            '                                    <div class="ExHistoryTable__Type ExHistoryTable__Type--Buy">매수</div>' +
+                            '                                </td>' +
+                            '                                <td>' +
+                            '                                    <div class="ExHistoryTable__Price">10,460</div>' +
+                            '                                    <div class="ExHistoryTable__Total">3,000,000</div>' +
+                            '                                </td>' +
+                            '                                <td>' +
+                            '                                    <div class="ExHistoryTable__Amount">286.80688336</div>' +
+                            '                                </td>' +
+                            '                            </tr>' +
+                            '                            <tr>' +
+                            '                                <td>' +
+                            '                                    <div class="ExHistoryTable__Day">2021.11.02</div>' +
+                            '                                    <div class="ExHistoryTable__Time">13:50</div>' +
+                            '                                </td>' +
+                            '                                <td>' +
+                            '                                    <div class="ExHistoryTable__Pairs">GAS/KRW</div>' +
+                            '                                    <div class="ExHistoryTable__Type ExHistoryTable__Type--Buy">매수</div>' +
+                            '                                </td>' +
+                            '                                <td>' +
+                            '                                    <div class="ExHistoryTable__Price">10,460</div>' +
+                            '                                    <div class="ExHistoryTable__Total">3,000,000</div>' +
+                            '                                </td>' +
+                            '                                <td>' +
+                            '                                    <div class="ExHistoryTable__Amount">286.80688336</div>' +
+                            '                                </td>' +
+                            '                            </tr>' +
+                            '                            <tr>' +
+                            '                                <td>' +
+                            '                                    <div class="ExHistoryTable__Day">2021.11.02</div>' +
+                            '                                    <div class="ExHistoryTable__Time">13:50</div>' +
+                            '                                </td>' +
+                            '                                <td>' +
+                            '                                    <div class="ExHistoryTable__Pairs">GAS/KRW</div>' +
+                            '                                    <div class="ExHistoryTable__Type ExHistoryTable__Type--Buy">매수</div>' +
+                            '                                </td>' +
+                            '                                <td>' +
+                            '                                    <div class="ExHistoryTable__Price">10,460</div>' +
+                            '                                    <div class="ExHistoryTable__Total">3,000,000</div>' +
+                            '                                </td>' +
+                            '                                <td>' +
+                            '                                    <div class="ExHistoryTable__Amount">286.80688336</div>' +
+                            '                                </td>' +
+                            '                            </tr>' +
+                            '                        </tbody>' +
+                            '                    </table>' +
+                            '                </div>' +
+                            '                <div style="position: absolute; height: 6px; right: 2px; bottom: 2px; left: 2px; border-radius: 3px;">' +
+                            '                    <div' +
+                            '                        style="position: relative; display: block; height: 100%; cursor: pointer; border-radius: inherit; background-color: rgba(0, 0, 0, 0.2); width: 0px;">' +
+                            '                    </div>' +
+                            '                </div>' +
+                            '                <div style="position: absolute; width: 6px; right: 2px; bottom: 2px; top: 2px; border-radius: 3px;">' +
+                            '                    <div' +
+                            '                        style="position: relative; display: block; width: 100%; cursor: pointer; border-radius: inherit; background-color: rgba(0, 0, 0, 0.2); height: 69px; transform: translateY(0px);">' +
+                            '                    </div>' +
+                            '                </div>' +
+                            '            </div>' +
+                            '        </div>'
+                        );
+                    }
+                });
+            }
+        });
+
+
+        //차트 Start
         var ctx = document.getElementById("chart-bars").getContext("2d");
 
         new Chart(ctx, {
@@ -733,6 +1202,34 @@
             },
         });
     </script>
+
+    <script>
+
+        function updateTotalOrder() {
+
+            var order_price = uncomma($('#order_price')[0].value);
+            var order_amount = uncomma($('#order_amount')[0].value);
+
+            var total = Number(order_price) * Number(order_amount);
+
+            $('#total_order')[0].innerText = comma(String(total)) + " 원"
+        }
+
+        function inputNumberFormat(obj) {
+            obj.value = comma(uncomma(obj.value));
+        }
+
+        function comma(str) {
+            str = String(str);
+            return str.replace(/(\d)(?=(?:\d{3})+(?!\d))/g, '$1,');
+        }
+
+        function uncomma(str) {
+            str = String(str);
+            return str.replace(/[^\d]+/g, '');
+        }
+    </script>
+
     <script>
         var win = navigator.platform.indexOf('Win') > -1;
         if (win && document.querySelector('#sidenav-scrollbar')) {
