@@ -144,15 +144,53 @@
         <div class="container-fluid py-4">
 
                 <div class="container">
-                    <section id="main" class="mx-auto mt-5 pb-5 pt-5">
+                    <section id="main" class="mx-auto mt-5 pb-5 pt-1">
                         <h3> 투자성향 MBTI 테스트</h3>
-                        <div class="col-6 mx-auto">
+                        <div class="col-lg-5 col-6 mx-auto pb-3 pt-2">
                             <img src="../assets/img/thinker.png" alt="mainImage" class="img-fluid">
                         </div>
+
                         <p>
                             20개 문항의 투자성향 MBTI로 나의 투자 유형을 확인해 보세요!
                         </p>
+                        <!-- <form action="http://localhost:8080/" method="GET" target="_blank">
+                             onsubmit="return false" 
+                            <input id = "name" type="text" name="name" placeholder='이름을 입력하세요'>
+                            <input type="submit" value="시작하기" class="btn btn-outline-danger mt-3 " onclick="js:begin()">
+                        </form> -->
                         <button type="button" class="btn btn-outline-danger mt-3" onclick="js:begin()">시작하기</button>
+                        <input type = "text" id="name">
+    <!-- <input type = "text" id="inv_type"> -->
+
+
+                        <script>
+                        //ajaxbutton을 눌렀을 때 실행되는 함수
+                            document.querySelector('.btn').addEventListener('click', function () {
+                                var inputdata = document.getElementById("name").value ;
+                                console.log(inputdata);
+                                sendAjax('http://localhost:3000/ajax', inputdata)
+                            })
+                            //send함수 'http://localhost:3000/ajax'주소에 inputdata를 보냅니다.
+                            function sendAjax(url, data) {
+
+                                var data = { 'name': data };
+                                data = JSON.stringify(data);
+                                
+                                //data에 inputdata를 json형식으로 넣고 이를 xmlhttprequest를 통해 post방식으로 보냅니다.
+                                var xhr = new XMLHttpRequest();
+                                xhr.open('POST', url);
+                                xhr.setRequestHeader('Content-type', "application/json");
+                                xhr.send(data);
+                                
+                                //서버에서 결과가 도착하면 그것을 result div에 입력합니다.
+                                xhr.addEventListener('load', function () {
+                                    console.log(xhr.responseText);
+
+                                    document.querySelector(".result").innerHTML = xhr.responseText
+                                });
+                            }
+
+                        </script>
                     </section>
                     <section id="qna">
 
