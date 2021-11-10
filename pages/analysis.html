@@ -119,31 +119,35 @@
                 <nav aria-label="breadcrumb">
                     <h6 class="font-weight-bolder mb-0">종목분석</h6>
                 </nav>
-
-
-
                 <!-- 메인 카드-->
             </div>
         </nav>
-        <!-- End Navbar -->
-        <div class="container-fluid py-4">
+    </main>
+    <!-- End Navbar -->
+    <div class="row mb-4">
+        <div class="col-lg-7 col-md-6 mb-md-0 mb-4">
             <div class="row">
-              <div class="col-lg-8 col-md-10 mx-auto">
-                <div class="card mt-4">
-                  <div class="card-header p-3">
-                    <h5 class="mb-0">Alerts</h5>
-                  </div>
-                  <div class="card-body p-3 pb-0">
-                    <div class="alert alert-primary alert-dismissible text-white" role="alert">
-                      <span class="text-sm">A simple primary alert with <a href="javascript:;" class="alert-link text-white">an example link</a>. Give it a click if you like.</span>
-                      <button type="button" class="btn-close text-lg py-3 opacity-10" data-bs-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
+                <div class="col-lg-6 col-7" style="float: right;">
+                    <p class="text-sm mb-0">
+                        <span class="font-weight-bold ms-1" style="float:right">종목명</span>
+                    </p>
+                </div>
+                <div class="col-lg-3 col-1 my-auto text-end">
+                    <div class="ms-md-auto pe-md-3 d-flex ">
+                        <div class="input-group input-group-outline">
+                            <label class="form-label" style="float: right;">Type here</label>
+                            <input type="text" id="stock" class="form-control">
+                        </div>
+                        <button id="stock_button" onclick="stock_button();">검색</button>
                     </div>
                 </div>
             </div>
         </div>
-
+    </div>
+    <div style="top:-200px; left:100px; padding-left:20%">
+        <iframe src="https://finance.naver.com/item/sise_day.nhn?code=" width="700" height="342" scrolling="no" frameborder="0" id="url1"></iframe>
+    </div>
+    <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
         <!-- Do not modify the footer below !!-->
         <footer class="footer py-4  ">
             <div class="container-fluid">
@@ -180,11 +184,12 @@
     </main>
 
     <!--   Core JS Files   -->
-    <script src="./assets/js/core/popper.min.js"></script>
-    <script src="./assets/js/core/bootstrap.min.js"></script>
-    <script src="./assets/js/plugins/perfect-scrollbar.min.js"></script>
-    <script src="./assets/js/plugins/smooth-scrollbar.min.js"></script>
-    <script src="./assets/js/plugins/chartjs.min.js"></script>
+    <script src="../assets/js/core/popper.min.js"></script>
+    <script src="../assets/js/core/bootstrap.min.js"></script>
+    <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
+    <script src="../assets/js/plugins/smooth-scrollbar.min.js"></script>
+    <script src="../assets/js/plugins/chartjs.min.js"></script>
+    <script src="../assets/js/analysis.js"></script>
     <script>
         var ctx = document.getElementById("chart-bars").getContext("2d");
 
@@ -444,7 +449,7 @@
     <!-- Github buttons -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
-    <script src="./assets/js/material-dashboard.min.js?v=3.0.0"></script>
+    <script src="../assets/js/material-dashboard.min.js?v=3.0.0"></script>
 </body>
 
 </html>
