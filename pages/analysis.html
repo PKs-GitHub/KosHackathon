@@ -119,18 +119,234 @@
                 <nav aria-label="breadcrumb">
                     <h6 class="font-weight-bolder mb-0">종목분석</h6>
                 </nav>
-
-
-
                 <!-- 메인 카드-->
             </div>
         </nav>
-        <!-- End Navbar -->
+    </main>
+    <!-- End Navbar -->
+    <div class="row mb-4">
+        <div class="col-lg-7 col-md-6 mb-md-0 mb-4">
+            <div class="row">
+                <div class="col-lg-6 col-7" style="float: right;">
+                    <p class="text-sm mb-0">
+                        <span class="font-weight-bold ms-1" style="float:right">종목명</span>
+                    </p>
+                </div>
+                <div class="col-lg-3 col-1 my-auto text-end">
+                    <div class="ms-md-auto pe-md-3 d-flex ">
+                        <div class="input-group input-group-outline">
+                            <label class="form-label" style="float: right;">Type here</label>
+                            <input type="text" id="stock" class="form-control" onKeypress="javascript:if(event.keyCode==13) {stock_load();}"/> >
+                        </div>
+                        <button id="stock_button" onclick="stock_load()">
+                            Search
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 시작 -->
+    <div class="container-fluid py-4">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="card mt-4">
+                    <div class="card-header p-3">
+                        <h5 class="mb-0" id="stock_name">종목명</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-
-
-
-
+    <!-- 표 -->
+    <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="card-header p-3">
+            <div class="card-body px-0 pb-2">
+                <div class="table-responsive">
+                    <table class="table align-items-center mb-0">
+                        <thead>
+                            <tr>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                    <h5 h5 class="mb-0">주요재무정보</h5>
+                                </th>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                    <h5 h5 class="mb-0">2018.12</h5>
+                                </th>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                    <h5 h5 class="mb-0">2019.12</h5>
+                                </th>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                    <h5 h5 class="mb-0">2020.12</h5>
+                                </th>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                    <h5 h5 class="mb-0">2021.12</h5>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="d-flex px-2 py-1">
+                                        <div class="d-flex flex-column justify-content-center">
+                                            <h6 class="mb-0 text-sm">매출액</h6>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="align-middle text-center text-sm">
+                                    <span class="text-xs font-weight-bold" id ="mon1"> 0 </span>
+                                </td>
+                                <td class="align-middle text-center text-sm">
+                                    <span class="text-xs font-weight-bold" id ="mon2"> 0 </span>
+                                </td>
+                                <td class="align-middle text-center text-sm">
+                                    <span class="text-xs font-weight-bold" id ="mon3"> 0 </span>
+                                </td>
+                                <td class="align-middle text-center text-sm">
+                                    <span class="text-xs font-weight-bold" id ="mon4"> 0 </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="d-flex px-2 py-1">
+                                        <div class="d-flex flex-column justify-content-center">
+                                            <h6 class="mb-0 text-sm">영업이익</h6>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="align-middle text-center text-sm">
+                                    <span class="text-xs font-weight-bold" id="ben1"> 0 </span>
+                                </td>
+                                <td class="align-middle text-center text-sm">
+                                    <span class="text-xs font-weight-bold" id="ben2"> 0 </span>
+                                </td>
+                                <td class="align-middle text-center text-sm">
+                                    <span class="text-xs font-weight-bold" id="ben3"> 0 </span>
+                                </td>
+                                <td class="align-middle text-center text-sm">
+                                    <span class="text-xs font-weight-bold" id="ben4"> 0 </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="d-flex px-2 py-1">
+                                        <div class="d-flex flex-column justify-content-center">
+                                            <h6 class="mb-0 text-sm">ROE</h6>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="align-middle text-center text-sm">
+                                    <span class="text-xs font-weight-bold" id="roe1"> 0 </span>
+                                </td>
+                                <td class="align-middle text-center text-sm">
+                                    <span class="text-xs font-weight-bold" id="roe2"> 0 </span>
+                                </td>
+                                <td class="align-middle text-center text-sm">
+                                    <span class="text-xs font-weight-bold" id="roe3"> 0 </span>
+                                </td>
+                                <td class="align-middle text-center text-sm">
+                                    <span class="text-xs font-weight-bold" id="roe4"> 0 </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="d-flex px-2 py-1">
+                                        <div class="d-flex flex-column justify-content-center">
+                                            <h6 class="mb-0 text-sm">PER</h6>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="align-middle text-center text-sm">
+                                    <span class="text-xs font-weight-bold" id="per1"> 0 </span>
+                                </td>
+                                <td class="align-middle text-center text-sm">
+                                    <span class="text-xs font-weight-bold" id="per2"> 0 </span>
+                                </td>
+                                <td class="align-middle text-center text-sm">
+                                    <span class="text-xs font-weight-bold" id="per3"> 0 </span>
+                                </td>
+                                <td class="align-middle text-center text-sm">
+                                    <span class="text-xs font-weight-bold" id="per4"> 0 </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="d-flex px-2 py-1">
+                                        <div class="d-flex flex-column justify-content-center">
+                                            <h6 class="mb-0 text-sm">EPS</h6>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="align-middle text-center text-sm">
+                                    <span class="text-xs font-weight-bold" id="eps1"> 0 </span>
+                                </td>
+                                <td class="align-middle text-center text-sm">
+                                    <span class="text-xs font-weight-bold" id="eps2"> 0 </span>
+                                </td>
+                                <td class="align-middle text-center text-sm">
+                                    <span class="text-xs font-weight-bold" id="eps3"> 0 </span>
+                                </td>
+                                <td class="align-middle text-center text-sm">
+                                    <span class="text-xs font-weight-bold" id="eps4"> 0 </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="d-flex px-2 py-1">
+                                        <div class="d-flex flex-column justify-content-center">
+                                            <h6 class="mb-0 text-sm">PBR</h6>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="align-middle text-center text-sm">
+                                    <span class="text-xs font-weight-bold" id="pbr1"> 0 </span>
+                                </td>
+                                <td class="align-middle text-center text-sm">
+                                    <span class="text-xs font-weight-bold" id="pbr2"> 0 </span>
+                                </td>
+                                <td class="align-middle text-center text-sm">
+                                    <span class="text-xs font-weight-bold" id="pbr3"> 0 </span>
+                                </td>
+                                <td class="align-middle text-center text-sm">
+                                    <span class="text-xs font-weight-bold" id="pbr4"> 0 </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="d-flex px-2 py-1">
+                                        <div class="d-flex flex-column justify-content-center">
+                                            <h6 class="mb-0 text-sm">BPS</h6>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="align-middle text-center text-sm">
+                                    <span class="text-xs font-weight-bold" id ="bps1"> 0 </span>
+                                </td>
+                                <td class="align-middle text-center text-sm">
+                                    <span class="text-xs font-weight-bold" id ="bps2"> 0 </span>
+                                </td>
+                                <td class="align-middle text-center text-sm">
+                                    <span class="text-xs font-weight-bold" id ="bps3"> 0 </span>
+                                </td>
+                                <td class="align-middle text-center text-sm">
+                                    <span class="text-xs font-weight-bold" id ="bps4"> 0 </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="top:-200px; left:100px; padding-left:30%; padding-top:50px">
+        <iframe src="https://finance.naver.com/item/sise_day.nhn?code=" width="700" height="100%" scrolling="no"
+            frameborder="0" id="url1"></iframe>
+    </div>
+    <div style="top:1000px; left:100px; padding-left:30%; padding-top:50px">
+        <iframe src="https://navercomp.wisereport.co.kr/company/c1010001.aspx?cmp_cd=" width="700" height="4000px"
+            scrolling="no" frameborder="0" id="url2"></iframe>
+    </div>
+    <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
         <!-- Do not modify the footer below !!-->
         <footer class="footer py-4  ">
             <div class="container-fluid">
@@ -167,11 +383,123 @@
     </main>
 
     <!--   Core JS Files   -->
-    <script src="./assets/js/core/popper.min.js"></script>
-    <script src="./assets/js/core/bootstrap.min.js"></script>
-    <script src="./assets/js/plugins/perfect-scrollbar.min.js"></script>
-    <script src="./assets/js/plugins/smooth-scrollbar.min.js"></script>
-    <script src="./assets/js/plugins/chartjs.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-3.1.0.js"></script>
+    <script src="../assets/js/core/popper.min.js"></script>
+    <script src="../assets/js/core/bootstrap.min.js"></script>
+    <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
+    <script src="../assets/js/plugins/smooth-scrollbar.min.js"></script>
+    <script src="../assets/js/plugins/chartjs.min.js"></script>
+    <script src="../assets/js/analysis.js"></script>
+    <script type="text/javascript" src="../assets/js/stock.json"></script>
+    <script type="text/javascript" src="../assets/js/stock2.json"></script>
+    <script>
+        var cnt = 0;
+        function stock_load() { //종목코드 변경 name -> code
+            var stock2;
+            var jsonData = JSON.parse(JSON.stringify(mastercode));
+            var stock = document.getElementById('stock').value;
+
+            var jsonData2 = JSON.parse(JSON.stringify(invest));
+
+            var url1 = document.getElementById("url1"); // default url
+            var prev_url1 = "https://finance.naver.com/item/sise_day.nhn?code="
+
+            var url2 = document.getElementById("url2"); // default url
+            var prev_url2 = "https://navercomp.wisereport.co.kr/company/c1010001.aspx?cmp_cd="
+            var stock = document.getElementById('stock').value;
+
+            if (stock >= '000000' && stock <= '999999') {
+                for (i in jsonData) {
+                    if (jsonData[i].code == stock) {
+                        document.getElementById("stock_name").innerText = jsonData[i].name;
+                    }
+                }
+            }
+            else {
+                for (i in jsonData) {
+                    if (jsonData[i].name == stock) {
+                        document.getElementById("stock_name").innerText = jsonData[i].name;
+                        stock = jsonData[i].code;
+                    }
+                }
+            }
+            var new_url1 = prev_url1 + stock;
+            var new_url2 = prev_url2 + stock;
+
+            document.getElementById('url1').setAttribute('src', new_url1);
+            document.getElementById('url2').setAttribute('src', new_url2);
+            for (i in jsonData2) {
+                if(stock == jsonData2[i].code || stock == jsonData[i].name)
+                {
+                    document.getElementById("mon1").innerText = jsonData2[i].mon1;
+                    document.getElementById("mon2").innerText = jsonData2[i].mon2;
+                    document.getElementById("mon3").innerText = jsonData2[i].mon3;
+                    document.getElementById("mon4").innerText = jsonData2[i].mon4;
+
+                    document.getElementById("ben1").innerText = jsonData2[i].ben1;
+                    document.getElementById("ben2").innerText = jsonData2[i].ben2;
+                    document.getElementById("ben3").innerText = jsonData2[i].ben3;
+                    document.getElementById("ben4").innerText = jsonData2[i].ben4;
+
+                    document.getElementById("roe1").innerText = jsonData2[i].ben4;
+                    document.getElementById("roe2").innerText = jsonData2[i].ben4;
+                    document.getElementById("roe3").innerText = jsonData2[i].ben4;
+                    document.getElementById("roe4").innerText = jsonData2[i].ben4;
+
+                    document.getElementById("per1").innerText = jsonData2[i].ben4;
+                    document.getElementById("per2").innerText = jsonData2[i].ben4;
+                    document.getElementById("per3").innerText = jsonData2[i].ben4;
+                    document.getElementById("per4").innerText = jsonData2[i].ben4;
+
+                    document.getElementById("eps1").innerText = jsonData2[i].ben4;
+                    document.getElementById("eps2").innerText = jsonData2[i].ben4;
+                    document.getElementById("eps3").innerText = jsonData2[i].ben4;
+                    document.getElementById("eps4").innerText = jsonData2[i].ben4;
+
+                    document.getElementById("pbr1").innerText = jsonData2[i].pbr1;
+                    document.getElementById("pbr2").innerText = jsonData2[i].pbr2;
+                    document.getElementById("pbr3").innerText = jsonData2[i].pbr3;
+                    document.getElementById("pbr4").innerText = jsonData2[i].pbr4;
+
+                    document.getElementById("bps1").innerText = jsonData2[i].bps1;
+                    document.getElementById("bps2").innerText = jsonData2[i].bps2;
+                    document.getElementById("bps3").innerText = jsonData2[i].bps3;
+                    document.getElementById("bps4").innerText = jsonData2[i].bps4;
+                }
+            }
+
+            let params = {
+                "code": stock,
+                "target": "finsum_more"
+            };
+            let query = Object.keys(params).map(k => encodeURIComponent(k) + '=' + encodeURIComponent(params[k])).join('&');
+            let myurl = "https://finance.naver.com/item/coinfo.naver?" + query;
+            /*
+            $.ajax({
+                url: myurl,
+                dataType: "html",
+                type: 'GET',
+                //crossOrigin: true,
+                cache: false,
+                success: function(data) {
+                    console.log(data);                             
+
+                    //종목명
+                    var e = $(data).find(".wrap_company")[0].childNodes[1].innerText;
+                    $('#stock_name').text(e);
+
+                    //매출액
+                    //#QmZIZ20rMn > table:nth-child(2) > tbody > tr:nth-child(1) > td:nth-child(2) > span
+                    //#QmZIZ20rMn > table:nth-child(2) > tbody > tr:nth-child(1) > td:nth-child(2)
+                    var e = $(data).find("#QmZIZ20rMn").children("table");
+                    console.log(e);
+                    console.log(e.text());
+                }
+            });
+            */
+        }
+    </script>
     <script>
         var ctx = document.getElementById("chart-bars").getContext("2d");
 
@@ -431,7 +759,7 @@
     <!-- Github buttons -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
-    <script src="./assets/js/material-dashboard.min.js?v=3.0.0"></script>
+    <script src="../assets/js/material-dashboard.min.js?v=3.0.0"></script>
 </body>
 
 </html>
