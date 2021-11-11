@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" charset="utf-8">
+
+<script src="../assets/js/setfirebase.js"></script>
+<script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+<script src="https://code.jquery.com/jquery-migrate-3.1.0.js"></script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/bluebird/latest/bluebird.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudfare.com/ajax/libs/fetch/2.0.3/fetch.js"></script>
+
+<html>
+
+<body>
+	<button onclick="getUser()">클릭</button>
+	<div id="userInfo"></div>
+
+	<script>
+
+		$.support.cors = true;
+
+		//var url = "https://jsonplaceholder.typicode.com/posts/1";
+		//var url= "https://m.stock.naver.com/api/stock/376300/basic";
+		//var url = "https://opendart.fss.or.kr/api/list.json";
+		//var url ='https://opendart.fss.or.kr/api/list.json?crtfc_key=c5112099299613cd17948a28a8a36cbe3cfdf093&bgn_de=20200117&end_de=20200117&corp_cls=Y&page_no=1&page_count=10';
+
+
+		let params = {
+
+			"crtfc_key": "c5112099299613cd17948a28a8a36cbe3cfdf093",
+			"corp_code": "00126380"
+
+			/*
+				//"crtfc_key": "c5112099299613cd17948a28a8a36cbe3cfdf093",
+				"crtfc_key": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+				"bgn_de": "20200117",
+				"end_de":"20200117",
+				"corp_cls":"Y",
+				"page_no":"1",
+				"page_count":"10"
+			*/
+		};
+
+		let query = Object.keys(params).map(k => encodeURIComponent(k) + '=' + encodeURIComponent(params[k])).join('&');
+
+		//let url = "https://opendart.fss.or.kr/api/list.json?" + query;
+		var url = "https://opendart.fss.or.kr/api/company.json?" + query;
+
+		function getUser() {
+
+			const config = {
+				method: "get",
+				mode: 'no-cors', // no-cors, cors, *same-origin
+				cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+				credentials: 'include',
+				//credentials: 'same-origin', // include, *same-origin, omit
+				credentials: 'same-origin', // include, *same-origin, omit
+				headers: {
+					'Content-Type': 'application/json',
+					//'Content-Type': 'text/plain',
+					//"Content-Type": "text/html; charset=utf-8",
+					//"Accept": "text/html",
+					//"Accept": "text/html,application/xhtml+xml,application/xml,application/signed-exchange",
+					//'Content-Type': 'application/x-www-form-urlencoded',
+					//'X-Naver-Client-Id': '7yev7Se3icC3rvx01cvW',
+					//'X-Naver-Client-Secret': 'cEVpUQKonf',
+				},
+				referrer: 'no-referrer', // no-referrer, *client
+			};
+
+
+			fetch(url, config)
+				.then((response) => {
+					if (!response.ok) {
+						alert("Error!");
+						throw new Error(response.error)
+					}
+					return response.json();
+				})
+				.then(data => {
+					console.log(data);
+				})
+		}
+	</script>
+
+</body>
+
+</html>

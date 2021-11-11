@@ -1,0 +1,444 @@
+<!--
+=========================================================
+* Material Dashboard 2 - v3.0.0
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/material-dashboard
+* Copyright 2021 Creative Tim (https://www.creative-tim.com)
+* Licensed under MIT (https://www.creative-tim.com/license)
+* Coded by Creative Tim
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>
+        슬기로운 주식생활 &#128526;
+    </title>
+    <!--     Fonts and icons     -->
+    <link rel="stylesheet" type="text/css"
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
+    <!-- Nucleo Icons -->
+    <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
+    <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <!-- CSS Files -->
+    <link id="pagestyle" href="../assets/css/material-dashboard.css?v=3.0.0" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body class="g-sidenav-show  bg-gray-200">
+    <aside
+        class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-gradient-dark"
+        id="sidenav-main">
+        <div class="sidenav-header">
+            <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none"
+                aria-hidden="true" id="iconSidenav"></i>
+            <a class="navbar-brand m-0" href=" https://demos.creative-tim.com/material-dashboard/pages/dashboard "
+                target="_blank">
+                <img src="../assets/img/logo-ct.png" class="navbar-brand-img h-100" alt="main_logo">
+                <span class="ms-1 font-weight-bold text-white">Menu</span>
+            </a>
+        </div>
+        <hr class="horizontal light mt-0 mb-2">
+        <div class="collapse navbar-collapse  w-auto  max-height-vh-100" id="sidenav-collapse-main">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link text-white " href="../home.html">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="material-icons opacity-10">home</i>
+                        </div>
+                        <span class="nav-link-text ms-1">홈</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white " href="../pages/invest_types.html">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="material-icons opacity-10">spellcheck</i>
+                        </div>
+                        <span class="nav-link-text ms-1">내 투자성향</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white " href="../pages/trading.html">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="material-icons opacity-10">paid</i>
+                        </div>
+                        <span class="nav-link-text ms-1">거래하기</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white " href="../pages/analysis.html">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="material-icons opacity-10">analytics</i>
+                        </div>
+                        <span class="nav-link-text ms-1">종목분석</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white active bg-gradient-primary" href="../pages/knowledge.html">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="material-icons opacity-10">school</i>
+                        </div>
+                        <span class="nav-link-text ms-1">깨알지식</span>
+                    </a>
+                </li>
+
+                <li class="nav-item mt-3">
+                    <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">바로가기</h6>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white " href="https://finance.naver.com/#/" target="_blank">
+
+                        <span class="nav-link-text ms-1">네이버증권</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white " href="https://www1.kiwoom.com/h/main" target="_blank">
+                        <span class="nav-link-text ms-1">키움증권</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </aside>
+    <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+        <!-- Navbar -->
+        <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur"
+            navbar-scroll="true">
+            <div class="container-fluid py-1 px-0">
+                <nav aria-label="breadcrumb">
+                    <h6 class="font-weight-bolder mb-0">깨알지식</h6>
+                </nav>
+
+
+
+                <!-- 메인 카드-->
+            </div>
+        </nav>
+        <!-- End Navbar -->
+        <!-- second Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="javascript:changeBody_tab1()">경제&nbsp;&nbsp;&nbsp;</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="javascript:changeBody_tab2()">주식&nbsp;&nbsp;&nbsp;</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="javascript:changeBody_tab3()">금리&nbsp;&nbsp;&nbsp;</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="javascript:changeBody_tab4()">환율&nbsp;&nbsp;&nbsp;</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="javascript:changeBody_tab5()">세계&nbsp;경제&nbsp;&nbsp;&nbsp;</a>
+                  </li>
+                </ul>
+                <!--<form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>-->
+              </div>
+            </div>
+          </nav>
+        <!--깨알상식 첫 페이지 카드 go_to_1()-->  
+        <div class="card" id="knowledge_body">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <a href="https://newsroom.koscom.co.kr/28812"> 
+                    <img src="https://newsroom.koscom.co.kr/wp-content/uploads/2021/11/komsomreport10_01.png" class="d-block w-100" alt="...">
+                    </a>      
+                </div>
+                  <div class="carousel-item">
+                    <a href="https://newsroom.koscom.co.kr/28554">
+                    <img src="https://newsroom.koscom.co.kr/wp-content/uploads/2021/10/01.png" class="d-block w-100" alt="...">
+                    </a>
+                  </div>
+                  <div class="carousel-item">
+                    <a href="https://newsroom.koscom.co.kr/28412">
+                    <img src="https://newsroom.koscom.co.kr/wp-content/uploads/2021/09/koscomreport09_01.png" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </div>
+        <!-- second end Navbar -->
+
+        <!-- Do not modify the footer below !!-->
+        <footer class="footer py-4  ">
+            <div class="container-fluid">
+                <div class="row align-items-center justify-content-lg-between">
+                    <div class="col-lg-4 mb-lg-0 mb-4">
+                        <div class="copyright text-center text-sm text-muted text-lg-start">
+                            ©
+                            <script>
+                                document.write(new Date().getFullYear())
+                            </script>, by Koscom Hackathon <b>Team 4</b>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <ul class="nav nav-footer justify-content-center justify-content-lg-end">
+                            <li class="nav-item">
+                                <a href="https://github.com/PKs-GitHub/KosHackathon" class="nav-link text-muted"
+                                    target="_blank">Git Repo</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://koshack.atlassian.net/jira/software/projects/KOS/boards/1"
+                                    class="nav-link text-muted" target="_blank">Jira</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://koshack.atlassian.net/wiki/spaces/K/overview?homepageId=163908"
+                                    class="nav-link text-muted" target="_blank">Confluence</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        </div>
+    </main>
+
+    <!--   Core JS Files   -->
+    <script src="../assets/js/core/popper.min.js"></script>
+    <script src="../assets/js/core/bootstrap.min.js"></script>
+    <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
+    <script src="../assets/js/plugins/smooth-scrollbar.min.js"></script>
+
+
+    <script>
+        var win = navigator.platform.indexOf('Win') > -1;
+        if (win && document.querySelector('#sidenav-scrollbar')) {
+            var options = {
+                damping: '0.5'
+            }
+            Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+        }
+    </script>
+    <!-- Github buttons -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+    <script src="../assets/js/material-dashboard.min.js?v=3.0.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+<script>
+
+    /* 경제 탭 */
+    function changeBody_tab1() {    
+        $('#knowledge_body')[0].innerHTML = 
+            '<div class="row my-3">'+ 
+                
+                '<div class="col-5"class="w-100 rounded">' +
+                    '<img src="https://postfiles.pstatic.net/MjAyMTExMTFfMTY3/MDAxNjM2NjI2Nzk2ODgx.hM9AzhPqk9659iqaU2fQtrSnZnteK4r9ci0rk3XDrTEg.cJM0W-qRecndCiNdnBUycVMlhIPu0zybC9ACzfMlaV8g.PNG.tmffml123/image.png?type=w580" width = "400" height = "200">' +
+                '</div>'+
+                '<div class="col-6">'+ 
+                    '<h1>경제란?</h>' +
+                        '<p><br>재화와 용역을 생산/분배/소비하는 활동과 직접 관련되는 질서와 행위의 자체를 의미합니다^_^</p>'+
+                '</div>' +
+            '<div/>'+
+            '<hr/>'+
+            '<div class="row my-3">'+ 
+                
+                '<div class="col-5"  class="w-100 rounded">' +
+                    '<img src="https://postfiles.pstatic.net/MjAyMTExMTFfMjcz/MDAxNjM2NjI3MTc2NTc5.yHX0-1YlD8YnYDugaEejq3Hird70bgg7ESOqiNmQoMsg.Kmunk_Nn8id_VA2dX7QoN5nRqB8_E2szUMn_uFFbfnog.PNG.tmffml123/image.png?type=w580" width = "400" height = "200">' +
+                '</div>'+
+                '<div class="col-6 bgcolor=$orange-100">'+ 
+                    '<h1>재화란?</h>' +
+                        '<p><br>사람이 바라는 것을 충족시켜주는 것을 의미합니다^_^</p>'+
+                '</div>' +
+            '<div/>'+
+            '<hr/>'+
+            '<div class="row my-3">'+ 
+        
+                '<div class="col-5">' +
+                    '<img src="https://postfiles.pstatic.net/MjAyMTExMTFfOCAg/MDAxNjM2NjI3MTg0MzI0.PDfnuqlyZEd1V-Aox5KTnKt2ezPvvE4jIqRkPhHcx7Yg._I9EXDj_5mVbaGS3T8CqUzpaiAUKdpOB6c1-3HT4GJ0g.PNG.tmffml123/image.png?type=w580" width = "400" height = "200">' +
+                '</div>'+
+                '<div class="col-6">'+ 
+                    '<h1>경제재란?</h>' +
+                        '<p><br>돈이나 노력을 지불해야 얻을 수 있는 재화를 의미합니다^_^<br>    '+
+                            '돈을 많이 벌어야 해요! <br>'+
+                            '투자합시다!</p>'+
+                '</div>' +
+            '<div/>';
+        
+
+    }
+
+    /* 주식 탭 */
+    function changeBody_tab2() {    
+        $('#knowledge_body')[0].innerHTML = 
+            '<div class="row my-3">'+ 
+                
+                '<div class="col-5"class="w-100 rounded">' +
+                    '<img src="https://postfiles.pstatic.net/MjAyMTExMTFfNTgg/MDAxNjM2NjI5NTM1NzY5.8CRAzDFTx6E7qxYFebebr9ZNrOMcpZL_I_klVexFX8cg.XBM_EmvCT9x1uD2CqsscAJ5y043RDeVZW6zbVAsmbhwg.PNG.tmffml123/image.png?type=w580" width = "400" height = "200">' +
+                '</div>'+
+                '<div class="col-6">'+ 
+                    '<h1>주식이란?</h>' +
+                        '<p><br>회사가 필요한 돈(자본금)을 마련하기 위해 투자자에게 발행하는 증명서 입니다^_^</p>'+
+                '</div>' +
+            '<div/>'+
+            '<hr/>'+
+            '<div class="row my-3">'+ 
+                
+                '<div class="col-5"  class="w-100 rounded">' +
+                    '<img src="https://postfiles.pstatic.net/MjAyMTExMTFfMjky/MDAxNjM2NjI5NTI0OTMz.Uq5weXRbuE65pcLeNmUZ4OR7dKSH7nTfX9tqvWt8msAg.s1Ilg_Bmp2xtaba5XSW_6yVcGVEApWVvW0PQP7hd2TMg.PNG.tmffml123/image.png?type=w580" width = "400" height = "200">' +
+                '</div>'+
+                '<div class="col-6 bgcolor=$orange-100">'+ 
+                    '<h1>주주와 투자자</h>' +
+                        '<p>주주는 주식을 가지고 있는 사람을 의미하고 투자자는 주식을 소유하고 싶은 사람을 의미합니다^_^<br>'+
+                            '주주는 주식을 비싸게 팔고 싶어하고 투자자는 주식을 싸게 사고 싶어한답니다~!</p>'+
+                '</div>' +
+            '<div/>'+
+            '<hr/>'+
+            '<div class="row my-3">'+ 
+        
+                '<div class="col-5">' +
+                    '<img src="https://postfiles.pstatic.net/MjAyMTExMTFfOTEg/MDAxNjM2NjMwOTU4NTA2.xK3WrJ6axJ6I3K_X04hMD9_rhtzalAWKMJTCIhyBSH0g.pIPl_4V7k8x4HHo4Y04u4xUiE3Pw98s3tSjFGfBbhzAg.PNG.tmffml123/image.png?type=w580" width = "400" height = "200">' +
+                '</div>'+
+                '<div class="col-6">'+ 
+                    '<h1>주식의 과정!</h>' +
+                        '<p><br>계좌를 개설한다!&nbsp; → &nbsp;투자자가 돈을 입금한다!&nbsp; → &nbsp;나의 투자 성향을 파악한다! &nbsp;→ &nbsp;주식을 거래한다!&nbsp; → &nbsp;거래가 성공했는지 본다(체결)&nbsp; → &nbsp;돈과 주식을 교환한다!    '+
+                            '</p>'+
+                '</div>' +
+            '<div/>';
+        
+
+    }
+
+    /* 금리 탭 */
+    function changeBody_tab3() {    
+        $('#knowledge_body')[0].innerHTML = 
+            '<div class="row my-3">'+ 
+                
+                '<div class="col-5"class="w-100 rounded">' +
+                    '<img src="https://www.bok.or.kr/static/portal/img/cts/sub8/200186_6.png" width = "400" height = "200">' +
+                '</div>'+
+                '<div class="col-6">'+ 
+                    '<h1>기준 금리란?</h>' +
+                        '<p><br>한 나의 기본이 되는 금리로 은행 금리 등의 기준이되는 금리입니다^_^'+
+                            '<br>기준 금리는 경제 상황에 맞게 조정됩니다</p>'+
+                '</div>' +
+            '<div/>'+
+            '<hr/>'+
+            '<div class="row my-3">'+ 
+                
+                '<div class="col-5"  class="w-100 rounded">' +
+                    '<img src="https://as2.ftcdn.net/v2/jpg/02/83/82/61/1000_F_283826112_6admr05tAa5fSlLSW6G937TqdDRds1Ap.jpg" width = "400" height = "200">' +
+                '</div>'+
+                '<div class="col-6 bgcolor=$orange-100">'+ 
+                    '<h1>금리가 상승하면?</h>' +
+                        '<p>물가가 올라 갈 때 금리도 함께 상승하는 이유는 너무나 쉽게 예상할 수 있습니다.<br>'+
+                            '예를 들어 여러분이 은행의 사장님이라고 생각해봅시다. 물가가 5%정도 뛸 것 같다면 얼마의 대출금리를 받고 돈을 빌려주겠습니까? 당연히 5%이상의 대출금리는 받아야합니다. 그래야 물가 상승분을 빼고도 남는게 있기 때문입니다.'+
+                            '</p>'+
+                '</div>' +
+            '<div/>'+
+            '<hr/>'+
+            '<div class="row my-3">'+ 
+        
+                '<div class="col-5">' +
+                    '<img src="https://as2.ftcdn.net/v2/jpg/02/91/96/45/1000_F_291964582_rbBY978nYh8lrHcsI91RHmr3XOTLiwpP.jpg" width = "400" height = "200">' +
+                '</div>'+
+                '<div class="col-6">'+ 
+                    '<h1>금리가 하락하면?</h>' +
+                        '<p><br>금리가 하락하면 대출받는 사람들이 많아 집니다. 투자가 활성화 되고 시장에 돈이 많이 풀리게 됩니다. 자연스럽게 부도산이 상승하게 됩니다.'+ 
+                            '무조건 좋은 것은 아니라구여!</p>'+
+                '</div>' +
+            '<div/>';
+        
+    }
+
+    /* 환율 탭 */
+    function changeBody_tab4() {    
+        $('#knowledge_body')[0].innerHTML = 
+            '<div class="row my-3">'+ 
+                
+                '<div class="col-5"class="w-100 rounded">' +
+                    '<img src="https://newsimg.sedaily.com/2020/11/16/1ZAFIKCWYR_1.jpg" width = "400" height = "200">' +
+                '</div>'+
+                '<div class="col-6">'+ 
+                    '<h1>환율이란?</h>' +
+                        '<p>미국에 가서 우리 돈 3,500원을 낸다면 어떤 상점 주인도 받아주지 않을 것입니당.'+ 
+                            '외국과 거래를 성사시키기 위해서는 자국 화폐를 다른 나라 돈으로 바꿔줘야 해용. <br>' +
+                            '이처럼 국가 간의 거래에 있어서 화폐의 교환이 먼저 이루어져야 거래가 이뤄질 수 있답니다. </p>'+
+                '</div>' +
+            '<div/>'+
+            '<hr/>'+
+            '<div class="row my-3">'+ 
+                
+                '<div class="col-5"  class="w-100 rounded">' +
+                    '<img src="https://st3.depositphotos.com/4441075/14202/v/600/depositphotos_142023632-stock-illustration-rising-graph-simple-web-icon.jpg" width = "400" height = "200">' +
+                '</div>'+
+                '<div class="col-6 bgcolor=$orange-100">'+ 
+                    '<h1>환율이 상승하면?</h>' +
+                        '<p>환율이 상승하면 금리는 비슷한 움직임을 보이는 것이다. 즉, 환율이 상승하면 (채권) 금리가 상승한다는 의미이다. 반면 금리가 상승하게 되면, 채권 가격은 하락하게 된다. 따라서 금리 인상한다는 소식이 들리면 채권 가격이 하락하므로 매도세로 바꾸어야 한다는 것이다.'
+                            +'</p>'+
+                '</div>' +
+            '<div/>'+
+            '<hr/>'+
+            '<div class="row my-3">'+ 
+        
+                '<div class="col-5">' +
+                    '<img src="https://png.pngtree.com/png-vector/20190331/ourlarge/pngtree-decline-graph-chart-icon-vector-with-outline-style-icon-set-png-image_876910.jpg" width = "400" height = "200">' +
+                '</div>'+
+                '<div class="col-6">'+ 
+                    '<h1>환율이 하락하면?</h>' +
+                        '<p>원-달러 환율이 하락하면 수출기업의 수입은 그만큼 줄어들게 된다. 외국에서 달러로 받는 돈은 같지만 원화 가치가 상승했기 때문에 국내에서 원화로 환전할 때'+ 
+                            '수입은 그만큼 줄어들게 되는 것이다. 또한 환율이 하락하면 수출제품 가격이 상승하여 수출이 줄어들게 된다. </p>'+
+                '</div>' +
+            '<div/>';
+    }
+
+    /* 세계지도 탭 */
+    function changeBody_tab5() {    
+        $('#knowledge_body')[0].innerHTML = 
+            '<div class="row my-3">'+ 
+                '<div class="col-5"class="w-100 rounded">' +
+                    '<img src="https://t1.daumcdn.net/cfile/tistory/254B664C534ACF792F">' +
+                '</div>'+
+            '<div/>'
+        
+    }
+
+    function go_to_1() {
+        window.open("https://newsroom.koscom.co.kr/28812"); 
+    }
+
+</script>
+
+
+
+</html>
