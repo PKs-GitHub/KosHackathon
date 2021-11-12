@@ -36,17 +36,21 @@
     <link id="pagestyle" href="../assets/css/material-dashboard.css?v=3.0.0" rel="stylesheet" />
 
     <!-- 투자자성향 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="../assets/css/invest_types_default.css">
     <link rel="stylesheet" href="../assets/css/invest_types_main.css">
     <link rel="stylesheet" href="../assets/css/invest_types_qna.css">
     <link rel="stylesheet" href="../assets/css/invest_types_animation.css">
     <link rel="stylesheet" href="../assets/css/invest_types_result.css">
+    <link rel="stylesheet" href="../assets/css/invest_types_input.css">
+    <link rel="stylesheet" href="../assets/css/investor_types_recommend.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
 
+    <script src="../assets/js/recommend.js" charset="UTF-8"></script>
+    <!-- <script src="../assets/js/invest_types_start.js" charset="UTF-8"></script> -->
+    
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
     <!-- 투자자성향 -->
 </head>
@@ -126,6 +130,8 @@
         </div>
 
     </aside>
+    <div id="rec_ret" style="display: none;"></div>
+
     <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
         <!-- Navbar -->
         <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur"
@@ -144,46 +150,254 @@
         </nav>
         <div class="container-fluid py-4">
 
-            <div class="container">
-                <section id="main" class="mx-auto mt-5 pb-5 pt-5">
-                    <h3> 투자성향 MBTI 테스트</h3>
-                    <div class="col-6 mx-auto">
-                        <img src="../assets/img/thinker.png" alt="mainImage" class="img-fluid">
-                    </div>
-                    <p>
-                        20개 문항의 투자성향 MBTI로 나의 투자 유형을 확인해 보세요!
-                    </p>
-                    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:begin()">시작하기</button>
-                </section>
-                <section id="qna">
+                <div class="container">
+                    <section id="main" class="mx-auto mt-5 pb-5 pt-1">
+                        <h3> 투자성향 MBTI 테스트</h3>
+                        <div class="col-lg-5 col-6 mx-auto pb-1 pt-2">
+                            <img src="../assets/img/thinker.png" alt="mainImage" class="img-fluid">
+                        </div>
 
-                    <div class="status mx-auto mt-5">
-                        <div class="statusBar">
+                        <p>
+                            20개 문항의 투자성향 MBTI로 나의 투자 유형을 확인해 보세요!
+                        </p>
+                        <!-- <form action="http://localhost:8080/" method="GET" target="_blank">
+                             onsubmit="return false" 
+                            <input id = "name" type="text" name="name" placeholder='이름을 입력하세요'>
+                            <input type="submit" value="시작하기" class="btn btn-outline-danger mt-3 " onclick="js:begin()">
+                        </form> -->
+                        <div id="iform">
+                            <form>
+                                
+                                <div class="question mx-auto">
+                                <input type="text" id="mbti" required/>
+                                <label id="mbti_label">MBTI</label>
+                                </div>
+                                <div class="question">
+                                <input type="text" id="name" required/>
+                                <label>NAME</label>
+                                </div>
+    
+                                <button type="button" class="btn btn-outline-danger mt-3" onclick="js:begin()">시작하기</button>
+
+
+                                
+                                <script>
+
+                                    //ajaxbutton을 눌렀을 때 실행되는 함수
+                                        document.querySelector('.btn').addEventListener('click', function () {
+                                        // var inputdata = document.getElementById("name").value ;
+                                        var inputdata = { 'name': document.getElementById("name").value, 'mbti': document.getElementById("mbti").value};
+                                            console.log(inputdata);
+                                            sendAjax('http://localhost:3000/ajax', inputdata);
+
+                                            console.log(ret);
+
+                                            //$('#rec_ret').innerText = ret;
+
+                                            
+                                        })
+
+                                </script>
+                                <!-- <button type="button" class="btn_look btn-outline-danger mt-3" onclick="js:goRecommend()">추천 종목 보러가기</button> -->
+                            </form>
+                        </div>
+                        
+                        <!-- <button type="button" class="btn btn-outline-danger mt-3" onclick="js:begin()">시작하기</button> -->
+                        <!-- <input type = "text" id="name"> -->
+    <!-- <input type = "text" id="inv_type"> -->
+
+
+
+                        
+                    </section>
+                    <section id="qna">
+
+                        <div class="status mx-auto mt-5">
+                            <div class="statusBar">
+
+                            </div>
+                        </div>
+
+                        <div class="qBox my-5 py-3 mx-auto">
 
                         </div>
-                    </div>
+                        <div class="answerBox">
 
-                    <div class="qBox my-5 py-3 mx-auto">
+                        </div>
 
-                    </div>
-                    <div class="answerBox">
+                    </section>
+                    <section id="result"class="mx-auto mt-5 pb-5 pt-5">
+                        <h3> 투자성향 MBTI 테스트를 완료하였습니다</h3>
+                        <div class="col-6 mx-auto pb-5 pt-5">
+                            <img src="../assets/img/finish.png" alt="mainImage" class="img-fluid">
+                        </div>
+                        
+                        <button type="button" class="btn_look btn-outline-danger mt-3" onclick="js:goRecommend()">추천 종목 보러가기</button>
+                        <button type="button" class="btn_again btn-outline-danger mt-3" onclick="js:begin()">설문조사 다시하기</button>
 
-                    </div>
 
-                </section>
-                <section id="result" class="mx-auto mt-5 pb-5 pt-5">
-                    <h3> 투자성향 MBTI 테스트를 완료하였습니다</h3>
-                    <div class="col-6 mx-auto pb-5 pt-5">
-                        <img src="../assets/img/finish.png" alt="mainImage" class="img-fluid">
-                    </div>
+                        <script>
 
-                    aaaaaaaaaaaaa
+                            //ajaxbutton을 눌렀을 때 실행되는 함수
+                                document.querySelector('.btn_look').addEventListener('click', function () {
+                                   // var inputdata = document.getElementById("name").value ;
+                                   var inputdata = { 'name': document.getElementById("name").value};
+                                    console.log(inputdata);
+                                    sendAjax('http://localhost:3000/getscore', inputdata);
 
-                    <button type="button" class="btn btn-outline-danger mt-3" onclick="js:begin()">다시 시작하기</button>
-                </section>
-                <script src="../assets/js/invest_types_data.js" charset="UTF-8"></script>
-                <script src="../assets/js/invest_types_start.js" charset="UTF-8"></script>
-            </div>
+                                    console.log(ret);
+
+                                    //$('#rec_ret').innerText = ret;
+
+                                    
+                                })
+
+                        </script>
+
+
+                    </section>
+
+                    
+                    <section id="recommend"class="mx-auto">
+                        <div class="container-fluid py-4">
+                            <div class="row">
+                              <div class="col-12">
+                                <div class="card my-4">
+                                  <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                                    <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
+                                      <h5 class="text-white text-capitalize ps-3 ">맞춤 추천 종목</h5>
+                                    </div>
+                                  </div>
+                                  <div class="card-body px-0 pb-2">
+                                    <div class="table-responsive p-0">
+                                      <table class="table align-items-center mb-0">
+                                        <thead>
+                                          <tr>
+                                            <th class="text-uppercase text-white bg-dark text-s font-weight-bolder opacity-7"> 종목명</th>
+                                            <th class="text-uppercase text-white bg-dark text-s font-weight-bolder opacity-7 ">현재가</th>
+                                            <th class="text-center text-uppercase text-white bg-dark text-s font-weight-bolder opacity-7">등락률</th>
+                                            <th class="text-center text-uppercase text-white bg-dark text-s font-weight-bolder opacity-7">시가</th>
+                                            <th class="text-center text-uppercase text-white bg-dark text-s font-weight-bolder opacity-7">고가</th>
+                                            <th class="text-center text-uppercase text-white bg-dark text-s font-weight-bolder opacity-7">저가</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                            <script>
+  
+
+
+
+                                                //로직 구현/////////////////////////////////////////////////////////
+                                                var ts = Math.random() * 111;
+                                                console.log(ts);
+                                                var rowCnt=10;
+                                                var usearr=recommend_list_1;
+                                                if(ts<=28){
+                                                    rowCnt=recommend_list_1.length;
+                                                    usearr=recommend_list_1;
+
+                                                }
+                                                else if(ts<=44){
+                                                    rowCnt=recommend_list_2.length;
+                                                    usearr=recommend_list_2;
+                                                }
+                                                else if(ts<=60){
+                                                    rowCnt=recommend_list_3.length;
+                                                    usearr=recommend_list_3;
+                                                }
+                                                else if(ts<=77){
+                                                    rowCnt=recommend_list_4.length;
+                                                    usearr=recommend_list_4;
+                                                }
+                                                else if(ts<=94){
+                                                    rowCnt=recommend_list_5.length;
+                                                    usearr=recommend_list_5;
+                                                }
+                                                else if(ts<=110){
+                                                    rowCnt=recommend_list_6.length;
+                                                    usearr=recommend_list_6;
+                                                }
+
+                                                
+                                                document.write("<div class='d-flex flex-column justify-content-center'>");
+                                                document.write("<h6 class='mb-0 text-lg'>"  +usearr[rowCnt-1][0]+"</h6> </div>");
+                                                document.write("<h6 class='mb-0 text-lg'>"  +usearr[rowCnt-1][1] +"</h6> </div>");
+                                                
+                                                for (let i = 0; i < rowCnt-1; i++) {
+                                                    document.write('<tr>');
+                                                    
+                                                        document.write('<td height=70>');
+
+                                                        document.write("<div class='d-flex flex-column justify-content-center'>");
+                                                        document.write("<h6 class='mb-0 text-lg'>"  +usearr[i][0]+  "</h6> </div>");
+
+                                                        document.write('</td>');
+
+
+                                                        document.write('<td>');
+                                                        if(usearr[i][2][0]=='-')
+                                                            document.write("<p class='text-md text-primary font-weight-bold mb-0'>" + usearr[i][1] + "</p>");
+                                                        else
+                                                        document.write("<p class='text-md text-danger font-weight-bold mb-0'>" + usearr[i][1] + "</p>");
+                                                        document.write('</td>');
+
+                                                        document.write('<td>');
+                                                        if(usearr[i][2][0]=='-')
+                                                            document.write("<p class='text-md text-primary font-weight-bold mb-0'>" + usearr[i][2] + "</p>");
+                                                        else
+                                                            document.write("<p class='text-md text-danger font-weight-bold mb-0'>" + usearr[i][2] + "</p>");
+
+                                                        document.write('</td>');
+                                                        
+                                                        document.write('<td>');
+
+                                                        document.write("<div class='d-flex flex-column justify-content-center'>");
+                                                        document.write("<h6 class='mb-0 text-sm'>"  +usearr[i][3]+  "</h6> </div>");
+
+                                                        document.write('</td>');
+
+
+                                                        document.write('<td>');
+
+                                                        document.write("<div class='d-flex flex-column justify-content-center'>");
+                                                        document.write("<h6 class='mb-0 text-sm'>"  +usearr[i][4]+  "</h6> </div>");
+
+                                                        document.write('</td>');
+                                                        document.write('<td>');
+
+                                                        document.write("<div class='d-flex flex-column justify-content-center'>");
+                                                        document.write("<h6 class='mb-0 text-sm'>"  +usearr[i][5]+  "</h6> </div>");
+
+                                                        document.write('</td>');
+                                                    
+                                                    document.write('</tr>')
+                                                }
+
+
+                                            </script>
+
+
+
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                          </div>
+                        
+                    </section>
+                    
+                                    
+                    <script src="../assets/js/invest_types_data.js" charset="UTF-8"></script>
+                    <script src="../assets/js/invest_types_start.js" charset="UTF-8"></script>
+
+
+                </div>
+
+
         </div>
         <!-- End Navbar -->
 
@@ -227,25 +441,10 @@
     </main>
 
     <!--   Core JS Files   -->
-    <script src="../assets/js/core/popper.min.js"></script>
-    <script src="../assets/js/core/bootstrap.min.js"></script>
-    <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
-    <script src="../assets/js/plugins/smooth-scrollbar.min.js"></script>
-    <script src="../assets/js/plugins/chartjs.min.js"></script>
-
-    <script>
-        var win = navigator.platform.indexOf('Win') > -1;
-        if (win && document.querySelector('#sidenav-scrollbar')) {
-            var options = {
-                damping: '0.5'
-            }
-            Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
-        }
-    </script>
+    
     <!-- Github buttons -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
-    <script src="../assets/js/material-dashboard.min.js?v=3.0.0"></script>
 </body>
 
 </html>
